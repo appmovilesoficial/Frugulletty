@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#df2989">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>MakeupKarelys</title>
+  <?!= include('styles.html'); ?>
+</head>
+<body>
+
+  <!-- ============ PANTALLA DE LOGIN ============ -->
+  <div id="pantalla-login" class="p-login" hidden>
+    <div class="login-card">
+      <div class="logo">💄</div>
+      <h1>MakeupKarelys</h1>
+      <p class="sub">Ventas · Inventario · Control · <span class="ver-app">v40</span></p>
+      <input id="in-usr" type="text" placeholder="Usuario" autocomplete="username" autocapitalize="none" spellcheck="false">
+      <input id="in-pwd" type="password" placeholder="Contraseña" autocomplete="current-password">
+      <button id="btn-login" class="btn btn-primario btn-ancho">Entrar</button>
+      <div id="login-error" class="aviso aviso-error" hidden></div>
+    </div>
+  </div>
+
+  <!-- ============ APLICACIÓN ============ -->
+  <div id="app" class="app" hidden>
+    <header class="barra">
+      <div class="barra-izq">
+        <button id="btn-menu" class="btn-menu" title="Menú" aria-label="Abrir menú">☰</button>
+        <span class="logo-mini">💄</span>
+        <span id="titulo-pagina">Inicio</span>
+      </div>
+      <div class="barra-der">
+        <span id="chip-tasa" class="chip-tasa" title="Tasa del día (BCV)">Tasa: …</span>
+      </div>
+    </header>
+
+    <!-- ============ GAVETA (menú lateral deslizable) ============ -->
+    <div id="gaveta-fondo" class="gaveta-fondo" hidden onclick="cerrarGaveta()"></div>
+    <aside id="gaveta" class="gaveta" aria-hidden="true">
+      <div class="gaveta-cab">
+        <span class="logo-mini">💄</span>
+        <div class="gaveta-tit">
+          <strong>MakeupKarelys</strong>
+          <div class="gaveta-usuario" id="gaveta-usuario"></div>
+        </div>
+        <button class="btn-icono gaveta-x" onclick="cerrarGaveta()" title="Cerrar" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav id="nav" class="gaveta-nav"></nav>
+      <div class="gaveta-pie">
+        <button class="btn btn-suave btn-ancho" id="btn-salir">⎋ Cerrar sesión</button>
+        <div class="gaveta-vers">MakeupKarelys · <span class="ver-app">v40</span></div>
+      </div>
+    </aside>
+
+    <main id="contenido" class="contenido"></main>
+
+    <div id="pie-pos" class="pie-pos" hidden></div>
+  </div>
+
+  <!-- ============ MODAL / TOAST ============ -->
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- La librería del escáner (html5-qrcode) ya NO se carga aquí: la app la descarga
+       solo cuando el usuario abre el escáner, para que las pestañas carguen más rápido.
+  -->
+  <?!= include('app.html'); ?>
+</body>
+</html>

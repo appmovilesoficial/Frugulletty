@@ -1,0 +1,32 @@
+# Clasp
+.clasprc.json
+clasprc.json
+
+# Respaldos
+*.bak
+*.old
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# PowerShell temporales
+*.ps1.bak
+
+# Archivos de build locales
+clasp/.clasp.json.bak
+clasp/*.bak
+.clasp.json.cuenta-*.bak
+.clasp.json.neutral.bak

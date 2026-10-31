@@ -1,0 +1,10 @@
+# Esto quiere decir: ignora todo...
+**/**
+
+# ...excepto los archivos que necesita la app
+!appsscript.json
+!**/*.gs
+!**/*.js
+!**/*.ts
+!**/*.html
+!**/*.css

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#df2989">
+  <title>MakeupKarelys — Vista previa (modo demo)</title>
+  <style>
+    /* Aviso flotante de modo demo (solo en esta vista previa local) */
+    #demo-aviso {
+      position: fixed; top: 8px; left: 50%; transform: translateX(-50%);
+      background: #d97706; color: #fff; font: 600 12.5px system-ui, sans-serif;
+      padding: 6px 14px; border-radius: 999px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="demo-aviso">👀 Vista previa DEMO — sin Google. Entra con lo que sea.</div>
+
+  <!-- ============ PANTALLA DE LOGIN ============ -->
+  <div id="pantalla-login" class="p-login" hidden>
+    <div class="login-card">
+      <div class="logo">🏪</div>
+      <h1>MakeupKarelys</h1>
+      <p class="sub">Ventas · Inventario · Control</p>
+      <input id="in-usr" type="text" placeholder="Usuario" autocomplete="username" autocapitalize="none" spellcheck="false">
+      <input id="in-pwd" type="password" placeholder="Contraseña" autocomplete="current-password">
+      <button id="btn-login" class="btn btn-primario btn-ancho">Entrar</button>
+      <div id="login-error" class="aviso aviso-error" hidden></div>
+    </div>
+  </div>
+
+  <!-- ============ APLICACIÓN ============ -->
+  <div id="app" class="app" hidden>
+    <header class="barra">
+      <div class="barra-titulo">
+        <span class="logo-mini">🏪</span>
+        <span id="titulo-pagina">Inicio</span>
+      </div>
+      <div class="barra-der">
+        <span id="chip-tasa" class="chip-tasa" title="Tasa del día (BCV)">Tasa: …</span>
+        <button id="btn-salir" class="btn-icono" title="Cerrar sesión">⎋</button>
+      </div>
+    </header>
+
+    <nav id="nav" class="nav-fila"></nav>
+
+    <main id="contenido" class="contenido"></main>
+
+    <div id="pie-pos" class="pie-pos" hidden></div>
+  </div>
+
+  <!-- ============ MODAL / TOAST ============ -->
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

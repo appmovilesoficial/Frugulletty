@@ -1,0 +1,65 @@
+⚠️ RÉPLICA INDEPENDIENTE — LÉEME ANTES DE TRABAJAR
+
+Esta carpeta ("AppControlmakeup") es una réplica INDEPENDIENTE del sistema
+"Bodegon Evolution" v40, rebautizada como "MakeupKarelys" y YA DESPLEGADA.
+Se creó como copia de trabajo del proyecto ORIGINAL, que sigue en producción
+y NO se debe tocar:
+
+  ORIGINAL (producción, NO modificar):
+    C:\Users\ROSGOD\Documents\Default Project\AppControlNegocio   ("Bodegon Evolution" v40)
+
+  Otra réplica previa (no es esta, NO modificar):
+    C:\Users\ROSGOD\Documents\Default Project\AppControlNegocio-Copia  ("FresaChoco" V2.0)
+
+===================== DATOS DEL DESPLIEGUE (MakeupKarelys) =====================
+
+  Cuenta Google:      makeupkarelyss@gmail.com
+  Proyecto Apps Script: 1Dpl6kT7OANYJo7wyFtOgt58BULVUQbUwmyzfOoHpMPYtjHPLmga8Jxya
+  Hoja de datos (nueva): 1Eks2fpND8nAHO6GHJUwPU2wwyozWYIdvqLMznbpcc6E
+  Deployment:         AKfycbzLgLTipYZdCzp5vyyNWHYGT2HrSz-se3R1hMTaZfa9Ntwk_ez5GpfgZ7v32LJcIqLOow
+  URL API (/exec):    https://script.google.com/macros/s/AKfycbzLgLTipYZdCzp5vyyNWHYGT2HrSz-se3R1hMTaZfa9Ntwk_ez5GpfgZ7v32LJcIqLOow/exec
+  UI publicada:       https://makeupkarelys.github.io/
+  Repo de la UI:      makeupkarelys/makeupkarelys.github.io (rama main)
+  Usuario inicial:    admin / TuClaveFuerte2026  (cámbiala en Ajustes → Mi contraseña)
+  Versión:            v40 (coherente en app.js, Index.esqueleto.html e infoServidor)
+
+  La URL anterior YA está fijada en `app.js` (`URL_API`). Si algún día cambias
+  de deployment, actualízala ahí y vuelve a construir.
+
+========================== PUNTOS IMPORTANTES =================================
+
+1. clasp ACTIVO apuntando al script NUEVO (ya NO a producción). Verifica siempre
+   `clasp\\.clasp.json`: scriptId = 1Dpl6kT7… y parentId = 1Eks2fpN…. NUNCA
+   pongas aquí el scriptId de producción (1uO1WrprCK9uY7fMKjnUwQN0vYGvGD3nZ5KqIfa82PBdOHUhXtxJbtdl3).
+   El respaldo neutralizado quedó en `clasp\\.clasp.json.neutral.bak` y el de la
+   cuenta anterior en `clasp\\.clasp.json.cuenta-evolutionbodegon.bak`.
+
+2. Datos: la réplica usa su PROPIA hoja (arriba). La hoja real del original NO
+   está en esta carpeta. No escribas ni borres datos reales. Toda prueba debe
+   crear y limpiar sus propios productos/ventas.
+
+3. Código privado: NO subas `app.js` / `Codigo.gs` a repositorios públicos.
+   Solo se publica la UI (`para-publicar/`). El repo de GitHub Pages contiene
+   ÚNICAMENTE `index.html` y `LEEME.txt`.
+
+4. Para reentrenar la estructura y el proceso de build/despliegue, lee:
+   - README.md (raíz)
+   - clasp/INSTRUCCIONES.md y clasp/INSTALAR.cmd
+   - clasp/_build_inline.ps1 (regenera los 3 index desde Index.esqueleto.html)
+   - REPLICA_PROMPT.md (el prompt con el que se abrió la sesión original)
+
+5. Ciclo ante cualquier cambio de código:
+   `_build_inline.ps1` → pruebas (`node tests/escaneo.test.js`) → `clasp push -f`
+   → `clasp create-deployment` (o `update-deployment <id>` para conservar la URL)
+   → subir `para-publicar/` a GitHub Pages (token en el script
+   C:\\Users\\ROSGOD\\AppData\\Local\\Temp\\opencode\\update_gh_makeup.ps1).
+
+========================== HISTORIAL / AVISOS =================================
+
+- (2026-10-10) Esta carpeta llegó como copia exacta del original v40 con
+  `.clasp.json` apuntando a PRODUCCIÓN. Se neutralizó, se rebautizó a
+  MakeupKarelys y se desplegó de forma independiente en la cuenta nueva.
+- Quedó un proyecto ORFANDO en la cuenta anterior (se creó por error antes de
+  activar la API en la cuenta nueva). Enviar a la papelera desde evolutionbodegon:
+    Script: https://script.google.com/d/1PDP0bQG-uMTGAhPcXs67CBuYw9kYp4hcxUTOK-q7CluPpnqVr9wBEvCt/edit
+    Hoja:   https://drive.google.com/open?id=18QKf4tfQmJbguWIR1l0YbPbwmmpNtf7vdvy2brcc2yM

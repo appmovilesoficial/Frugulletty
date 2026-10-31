@@ -1,0 +1,54 @@
+========================================================
+  MAKEUPKARELYS — CÓMO PUBLICAR LA APP EN INTERNET
+  (para que el escáner en vivo funcione en tu teléfono)
+========================================================
+
+ESTE ARCHIVO (index.html) ES LA APP COMPLETA:
+- Contiene la pantalla, los botones y toda la lógica.
+- Se conecta a TU hoja de Google (los datos siguen en tu Drive,
+  NO se mueven ni se copian).
+- Solo necesita internet para cargar la librería del escáner.
+
+POR QUÉ HAY QUE PUBLICARLA AQUÍ:
+Tu enlace actual (script.google.com) NO puede usar la cámara en
+vivo: Google la bloquea dentro de su marco (es una limitación de
+Google, no de tu teléfono). Al publicar esta página en un sitio
+normal, el navegador SÍ pide permiso de cámara y el escáner
+funciona igual que en pcactual.com.
+
+---------------------------------------
+OPCIÓN MÁS FÁCIL: NETLIFY DROP (recomendada)
+---------------------------------------
+1. Abre en tu computadora:  https://app.netlify.com/drop
+2. Di "Entrar con Google" y usa tu correo de Gmail.
+3. Arrastra el AERCA de esta carpeta ("para-publicar") hacia la
+   página y suéltalo. (Solo los 2 archivos: index.html y este.)
+4. Listo: Netlify te da un enlace tipo  https://xxx.netlify.app
+5. Abre ese enlace en el Chrome del CELULAR, entra con tu usuario,
+   ve a Vender y pulsa "▶ Iniciar escáner": Chrome te pedirá
+   permiso de cámara → "Permitir" → funciona.
+
+Cada vez que cambie la app (nueva versión), repite este proceso:
+arrastra la carpeta de nuevo al mismo Netlify Drop.
+
+---------------------------------------
+OTRAS OPCIONES (si prefieres)
+---------------------------------------
+- GitHub Pages: si tienes cuenta de GitHub. Crea un repo, sube los
+  2 archivos y activa Pages en Settings.
+- Cloudflare Pages: entra con Google, arrastra la carpeta.
+  https://dash.cloudflare.com  → Workers & Pages → Crear → Carga directa
+
+---------------------------------------
+NOTAS IMPORTANTES
+---------------------------------------
+- Guarda bien el enlace que te dé el hosting (es tu nueva "puerta"
+  de entrada). El enlace viejo de script.google.com sigue
+  funcionando para todo EXCEPTO el escáner en vivo.
+- Usuarios: los mismos de siempre (admin y empleados).
+- Datos: todo sigue en tu hoja de Google, exactamente igual.
+
+========================================================
+Este archivo fue generado automáticamente por el asistente.
+App v40 — "MakeupKarelys"
+========================================================
